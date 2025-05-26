@@ -1,14 +1,18 @@
 html, body {
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   scroll-behavior: smooth;
   background-color: #001885e7;
   color: #333;
+  min-height: 100vh;
 }
 
 /* Global list styling */
@@ -193,7 +197,6 @@ footer {
   }
 }
 
-
 .service-card:hover {
   transform: rotateY(5deg) translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -323,10 +326,7 @@ footer {
   transform: rotateY(10deg) translateY(-5px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
-.banner-img {
-  width: 500;
-  height: ;
-}
+
 .banner-img {
   width: 100vw;
   height: auto;  /* Maintain aspect ratio */
@@ -334,15 +334,6 @@ footer {
   margin: 0;
   padding: 0;
   object-fit: cover; /* optional, for cropping if inside fixed height */
-}
-.welcome-note-container {
-  width: 100%;
-  overflow: hidden;
-  background: #06ff1b;
-  padding: 10px 0;
-  border-top: 2px solid #2ef307;
-  border-bottom: 2px solid #0aee1d;
-  perspective: 1000px; /* adds 3D perspective */
 }
 
 .welcome-note-container {
