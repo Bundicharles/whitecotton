@@ -1,0 +1,364 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #001885e7;
+  color: #333;
+}
+
+/* Global list styling */
+ul {
+  font-size: 29px;
+  color: #000000;
+}
+
+/* Header Styling */
+header {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 25px;
+  height: auto;
+  display: block;
+  margin: 0px;
+  border-radius: 0px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #b27fac;
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #5a3e66;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.hero {
+  padding: 80px 20px;
+  background: #fceffb;
+  text-align: center;
+}
+
+section {
+  padding: 0;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+footer {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Book Style Section */
+.book-style {
+  padding: 5px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.book-text {
+  column-count: 2;
+  column-gap: 40px;
+  text-align: justify;
+}
+
+.book-text p {
+  margin-bottom: 1em;
+}
+
+.services ul {
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+/* Photo Collage */
+#photo-collage {
+  padding: 0;
+  background: #9c9999;
+  text-align: center;
+}
+
+#photo-collage h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 300px;
+  gap: 5px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .collage {
+    grid-template-columns: 1fr;
+  }
+
+  .collage img {
+    height: 200px;
+  }
+}
+
+/* MP4 Styling */
+.mp4 {
+  width: 100%;
+}
+
+/* Services Section */
+#services {
+  padding: 40px 20px;
+  background: #cec8c8;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+/* Service Grid */
+.service-grid {
+  display: flex;
+  flex-wrap: 0;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  perspective: 800px;
+}
+
+/* Service Card Styling */
+.service-card {
+  background: #fdfdfd;
+  padding: 20px;
+  width: 220px;
+  height: auto;
+  border-radius: 100px;
+  color: #7b07ff;
+  box-shadow: 0 8px 10px rgba(93, 253, 1, 0.5);
+  transform: rotateY(0deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.service-card:hover {
+  transform: rotateY(5deg) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2em;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* Full-width Gallery */
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Optional: Add spacing */
+.gallery-grid img:not(:last-child),
+.gallery-grid video:not(:last-child) {
+  margin-bottom: 0;
+}
+
+/* Social Section */
+.social-section {
+  background: #13411c;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.social-section h2 {
+  font-size: 2rem;
+  color: #25f70a;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 500px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transform-style: preserve-3d;
+  transition: transform 0.4s, box-shadow 0.4s;
+  box-shadow: 0 5px 15px rgb(0, 255, 55);
+
+  /* Reflection Effect */
+  -webkit-box-reflect: below 4px linear-gradient(transparent, rgba(218, 18, 18, 0.15));
+}
+
+.social-icon i {
+  font-size: 1.2rem;
+}
+
+.social-icon.facebook {
+  background: #3b5998; /* Facebook Blue */
+}
+
+.social-icon.instagram {
+  background: #e1306c;
+}
+
+.social-icon.whatsapp {
+  background: #25d366;
+}
+
+.social-icon.email {
+  background: #0306e4;
+}
+
+.social-icon:hover {
+  transform: rotateX(10deg) rotateY(10deg) translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Email link special styling */
+.email-link {
+  display: inline-block;
+  padding: 12px 18px;
+  margin: 10px;
+  border-radius: 10px;
+  background: #0306e4;
+  color: #fff;
+  font-size: 1.1em;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgb(0, 255, 21);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.email-link:hover {
+  transform: rotateY(10deg) translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+.banner-img {
+  width: 500;
+  height: ;
+}
+.banner-img {
+  width: 100vw;
+  height: auto;  /* Maintain aspect ratio */
+  display: block;
+  margin: 0;
+  padding: 0;
+  object-fit: cover; /* optional, for cropping if inside fixed height */
+}
+.welcome-note-container {
+  width: 100%;
+  overflow: hidden;
+  background: #06ff1b;
+  padding: 10px 0;
+  border-top: 2px solid #2ef307;
+  border-bottom: 2px solid #0aee1d;
+  perspective: 1000px; /* adds 3D perspective */
+}
+
+.welcome-note-container {
+  width: 100%;
+  overflow: hidden;
+  background: #fdfcfcfd;
+  padding: 10px 3px;
+  border-top: 2px solid #fdfcfcfd;
+  border-bottom: 2px solid #03fd03;
+  perspective: 1000px;
+}
+
+.welcome-note {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 4em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f005f8, #06f873, #faea04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: scroll-left-3d 15s linear infinite;
+  padding-left: 100%;
+  transform-style: preserve-3d;
+  text-shadow: 0 0 8px #0004eefd, 0 0 16px #e60000;
+}
+
+@keyframes scroll-left-3d {
+  from {
+    transform: translateX(0) rotateY(0deg);
+  }
+  to {
+    transform: translateX(-100%) rotateY(10deg);
+  }
+}
