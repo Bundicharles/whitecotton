@@ -153,24 +153,20 @@ footer {
   margin-bottom: 30px;
 }
 
-/* Service Grid */
 .service-grid {
   display: flex;
-  flex-wrap: 0;
+  flex-wrap: wrap; /* ✅ Allow wrapping */
   justify-content: center;
   gap: 20px;
-  width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
   perspective: 800px;
 }
 
-/* Service Card Styling */
 .service-card {
   background: #fdfdfd;
   padding: 20px;
   width: 220px;
-  height: auto;
   border-radius: 100px;
   color: #7b07ff;
   box-shadow: 0 8px 10px rgba(93, 253, 1, 0.5);
@@ -178,6 +174,20 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   transform-style: preserve-3d;
 }
+
+/* 👇 Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .service-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 90%; /* or use max-width: 300px */
+    border-radius: 20px;
+  }
+}
+
 
 .service-card:hover {
   transform: rotateY(5deg) translateY(-5px);
